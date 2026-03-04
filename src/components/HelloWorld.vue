@@ -32,16 +32,16 @@
       <!-- Product List -->
       <v-row v-if="filteredAndSortedProducts.length">
         <v-col v-for="product in filteredAndSortedProducts" :key="product.id" cols="12" sm="6" md="4" lg="3">
-          <v-card @click="viewProduct(product.id)" class="product-card mx-auto h-100" rounded="lg" elevation="3" hover>
-            <v-img height="200" :src="product.image" contain></v-img>
-            <v-card-title class="text-body-1 font-weight-bold text-primary product-title">{{ product.title }}</v-card-title>
-            <v-card-subtitle class="pb-2 d-flex align-center justify-space-between">
+          <v-card class="product-card mx-auto h-100" rounded="lg" elevation="3" hover>
+            <v-img @click="viewProduct(product.id)" height="200" :src="product.image" contain></v-img>
+            <v-card-title @click="viewProduct(product.id)" class="text-body-1 font-weight-bold text-primary product-title">{{ product.title }}</v-card-title>
+            <v-card-subtitle @click="viewProduct(product.id)" class="pb-2 d-flex align-center justify-space-between">
               <span class="font-weight-bold text-primary">${{ product.price }}</span>
               <v-chip v-if="product.rating && product.rating.rate" size="small" variant="outlined">
                 {{ product.rating.rate }} / 5
               </v-chip>
             </v-card-subtitle>
-            <v-card-text>
+            <v-card-text @click="viewProduct(product.id)">
               <div class="product-description text-primary">{{ product.description }}</div>
             </v-card-text>
             <v-card-actions class="px-4 pb-4 d-flex flex-column flex-sm-row ga-2">
