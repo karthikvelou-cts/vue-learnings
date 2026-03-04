@@ -19,13 +19,13 @@ const vuetify = createVuetify({
       shopTheme: {
         dark: false,
         colors: {
-          background: '#f5f7fb',
+          background: '#f2fbf7',
           surface: '#ffffff',
-          primary: '#1e66f5',
-          secondary: '#14b8a6',
+          primary: '#42b883',
+          secondary: '#35495e',
           error: '#dc2626',
-          info: '#0ea5e9',
-          success: '#16a34a',
+          info: '#2f855a',
+          success: '#2e7d32',
           warning: '#f59e0b',
         },
       },

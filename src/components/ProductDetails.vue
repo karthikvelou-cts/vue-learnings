@@ -22,9 +22,9 @@
             <v-chip size="small" color="primary" variant="tonal" class="mb-3">
               {{ product.category }}
             </v-chip>
-            <h1 class="text-h5 mb-3">{{ product.title }}</h1>
+            <h1 class="text-h5 text-primary mb-3">{{ product.title }}</h1>
             <div class="text-h6 text-primary mb-4">${{ product.price }}</div>
-            <p class="text-body-1 mb-4">{{ product.description }}</p>
+            <p class="text-body-1 text-primary mb-4">{{ product.description }}</p>
             <v-chip
               v-if="product.rating && product.rating.rate"
               size="small"

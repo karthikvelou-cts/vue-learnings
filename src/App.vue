@@ -1,11 +1,15 @@
 <template>
   <v-app class="app-shell">
     <v-app-bar color="surface" elevation="2">
-      <v-toolbar-title class="text-primary font-weight-bold">Vuetify Shop</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link to="/" class="brand-link text-primary font-weight-bold">
+          Vuetify Shop
+        </router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/" variant="text" class="mr-1">Products</v-btn>
-      <v-btn to="/about" variant="text" class="mr-4">About</v-btn>
-      <v-btn icon variant="text" class="mr-2" @click="cartDialog = true">
+      <v-btn to="/" variant="text" color="primary" class="mr-1">Products</v-btn>
+      <v-btn to="/about" variant="text" color="primary" class="mr-4">About</v-btn>
+      <v-btn icon variant="text" color="primary" class="mr-2" @click="cartDialog = true">
         <v-badge :content="cartCount" color="error" :model-value="cartCount > 0">
           <v-icon icon="mdi-cart" />
         </v-badge>
@@ -20,9 +24,9 @@
 
     <v-footer class="footer-section py-6">
         <v-container class="d-flex flex-column flex-md-row align-center justify-space-between ga-2">
-        <div class="text-subtitle-2">Vuetify Shop</div>
-        <div class="text-caption">Discover products, filter by category, and sort by price.</div>
-        <div class="text-caption">&copy; {{ currentYear }} Vuetify Shop. All rights reserved.</div>
+        <div class="text-subtitle-2 text-primary">Vuetify Shop</div>
+        <div class="text-caption text-primary">Discover products, filter by category, and sort by price.</div>
+        <div class="text-caption text-primary">&copy; {{ currentYear }} Vuetify Shop. All rights reserved.</div>
       </v-container>
     </v-footer>
 
@@ -320,5 +324,10 @@ export default {
 .footer-section {
   border-top: 1px solid rgba(var(--v-theme-primary), 0.2);
   background: rgb(var(--v-theme-surface));
+}
+
+.brand-link {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
