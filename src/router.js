@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './components/Home.vue'
+import HelloWorld from './components/HelloWorld.vue'
 import About from './components/About.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: HelloWorld,
+    props: { msg: 'Vuetify Todo List' }
   },
   {
     path: '/about',
