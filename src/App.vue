@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <header class="topbar">
-      <h1>Sports Quiz</h1>
-      <nav>
-        <router-link to="/quiz">Quiz</router-link>
-      </nav>
+      <h1><router-link to="/">Sports Quiz</router-link></h1>
+      <!-- <nav>
+        <router-link to="/quiz">Others Quiz</router-link>
+      </nav> -->
     </header>
 
     <main class="page">

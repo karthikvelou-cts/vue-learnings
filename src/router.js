@@ -4,13 +4,9 @@ import QuizView from './views/QuizView.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/quiz',
-  },
-  {
-    path: '/quiz',
     name: 'Quiz',
     component: QuizView,
-  },
+  }
 ]
 
 const router = createRouter({
